@@ -9,13 +9,32 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blueGrey[600],
         body: SafeArea(
           child: Column(
             children: [
               CircleAvatar(
                 radius: 50,
                 backgroundImage: AssetImage('images/me.jpg'),
+              ),
+              Text(
+                'Grant Shaw',
+                style: TextStyle(
+                  fontFamily: 'IndieFlower',
+                fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+
+              ),
+              Text(
+                'Software Engineer',
+                style: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
             ],
           ),
