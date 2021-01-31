@@ -33,7 +33,16 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Roboto',
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.blueGrey[100],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.add_shopping_cart
+                    ),
+                  ],
                 ),
               ),
             ],
