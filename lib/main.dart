@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.blueGrey[600],
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -35,17 +37,25 @@ class MyApp extends StatelessWidget {
                   color: Colors.blueGrey[100],
                 ),
               ),
+              SizedBox(
+                height: 20.0,
+                width: 200.0,
+                child: Divider(
+                  color: Colors.blueGrey[200],
+                  thickness: 2.0,
+                ),
+              ),
               Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 20.0,
                 ),
-                color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.all(
                     5.0,
                   ),
                   child: ListTile(
+                    onTap: () {Clipboard.setData(new ClipboardData(text: "01313332934"));},
                     leading: Icon(
                       Icons.phone,
                       color: Colors.blueGrey[800],
@@ -70,12 +80,12 @@ class MyApp extends StatelessWidget {
                   vertical: 10.0,
                   horizontal: 20.0,
                 ),
-                color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.all(
                     5.0,
                   ),
                   child: ListTile(
+                    onTap: () {Clipboard.setData(new ClipboardData(text: "grantshaw@hotmail.co.uk"));},
                     leading: Icon(
                       Icons.mail,
                       color: Colors.blueGrey[800],
